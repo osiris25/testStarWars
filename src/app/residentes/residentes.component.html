@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<h1 class="text-center">Personajes ordenados</h1>
+<app-buscador class="m-4"></app-buscador>
+<h6 class="text-center">digite "desc" para ordenar los personajes</h6>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Especie</th>
+                <th scope="col">Planeta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of resul">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.species}}</td>
+                <td>{{item.location.name}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
